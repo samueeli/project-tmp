@@ -1,0 +1,12 @@
+client_folder     = "client" # specify which folder you want to use for client
+server_folder     = "server" # specify which folder you want to use for server
+subscription_id   = "xxx-xxxx-xxxxx-xx-xx-xxxxx"
+resource_group    = "myrg"
+registry_name     = "myacr" # must be unique and contain 5-50 alphanumeric characters
+client_app_name   = "my-client"
+server_app_name   = "my-server"
+location          = "northeurope" # azure region/datacenter
+sku               = "Basic"       # Basic, Standard, Premium
+service_plan_name = "myasp"
+service_plan_sku  = "F1"
+os_type           = "Linux" # Linux or Windows
