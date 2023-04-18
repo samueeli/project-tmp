@@ -31,7 +31,8 @@ jobs:
       with:
         push: true
         tags: samulinacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_a6d9dec14ee34dd9a14c23880960702e }}/samulin-server:${{ github.sha }}
-        file: ./Dockerfile
+        context: ./server
+        file: ./server/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
