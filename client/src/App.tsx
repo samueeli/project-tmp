@@ -9,7 +9,8 @@ function App() {
 
   const getMessage = async () => {
     const res = await axios.get(
-      import.meta.env.VITE_API_URL || 'http://localhost:3000/api/hello'
+      `${import.meta.env.VITE_API_URL}/hello` ||
+        'http://localhost:3000/api/hello'
     );
     setMessage(res.data);
   };

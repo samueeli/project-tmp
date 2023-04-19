@@ -28,7 +28,7 @@ resource "azurerm_container_registry" "acr" {
 
   # Build and push client image to acr
   provisioner "local-exec" {
-    command = "docker build --build-arg VITE_API_URL='https://${var.server_app_name}.azurewebsites.net/api/hello' -t ${azurerm_container_registry.acr.login_server}/${var.client_app_name} ../${var.client_folder}"
+    command = "docker build --build-arg VITE_API_URL='https://${var.server_app_name}.azurewebsites.net/api' -t ${azurerm_container_registry.acr.login_server}/${var.client_app_name} ../${var.client_folder}"
   }
   provisioner "local-exec" {
     command = "docker login ${azurerm_container_registry.acr.login_server} -u ${azurerm_container_registry.acr.admin_username} -p ${azurerm_container_registry.acr.admin_password}"
