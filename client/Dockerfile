@@ -1,7 +1,7 @@
 FROM node:16-alpine
 WORKDIR /app
 COPY package*.json ./
-ENV VITE_API_URL="https://samulin-server.azurewebsites.net/api/hello"
+ENV VITE_API_URL=${VITE_API_URL}
 RUN npm ci
 COPY . .
 RUN npm run build
