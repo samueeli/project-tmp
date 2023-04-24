@@ -43,7 +43,7 @@ Now we need to add some configurations to the github actions that were generated
 		…
 		context: ./client
 		file: ./client/Dockerfile
-		build-args: \
+		build-args: |
 			VITE_API_URL=${{ secrets.VITE_API_URL }}
 ```
 
