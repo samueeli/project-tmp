@@ -75,6 +75,7 @@ resource "azurerm_linux_web_app" "client_app" {
 
   app_settings = {
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = "false"
+    VITE_API_URL                        = "https://${var.server_app_name}.azurewebsites.net/api"
   }
 
 }
